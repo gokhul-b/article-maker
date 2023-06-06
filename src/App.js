@@ -58,16 +58,22 @@ function App() {
     setLastmatchform("");
     setRole("");
     setSelectionpercentage("");
+    setResult([...result]);
   };
+  const isData = false;
+  if (result.length !== 0) {
+    return true;
+  }
+  console.log(isData);
   return (
     <div>
       <form className="flex flex-col items-center mt-12">
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <div className="">
+          <div>
             <input
               type="text"
               placeholder="player name"
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -76,21 +82,20 @@ function App() {
             <input
               type="number"
               placeholder="last match score"
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500"
               value={lastMatchScore}
               onChange={(e) => setlastMatchScore(e.target.value)}
             />
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition"> : </label> */}
             <select
               name="batsmanPosition"
               id=""
               value={position}
               onChange={(e) => setPosition(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 text-slate-500"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 text-slate-400"
             >
-              <option value="">Select Batsman Postion</option>
+              <option value="None">Select Batsman Postion</option>
               <option value="Opening batsman">Opening batsman</option>
               <option value="One Down batsman">One Down batsman</option>
               <option value="2nd down batsman">2nd down batsman</option>
@@ -101,15 +106,14 @@ function App() {
             </select>
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition">Run Scoring Style : </label> */}
             <select
               name="batsmanPosition"
               id=""
               value={scoringStyle}
               onChange={(e) => setScoringStyle(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
             >
-              <option value="">Select Run Scoring Style</option>
+              <option value="None">Select Run Scoring Style</option>
               <option value="Quick run scorer">Quick run scorer</option>
               <option value="Attacking Batsman">Attacking Batsman</option>
               <option value="Average Batsman">Average Batsman</option>
@@ -117,15 +121,14 @@ function App() {
             </select>
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition"> : </label> */}
             <select
               name="batsmanPosition"
               id=""
               value={bowlingStyle}
               onChange={(e) => setBowlingStyle(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
             >
-              <option value="">Select Bowling Style</option>
+              <option value="None">Select Bowling Style</option>
               <option value="Right Arm Fast Bowler">
                 Right Arm Fast Bowler
               </option>
@@ -135,50 +138,46 @@ function App() {
             </select>
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition"> : </label> */}
             <input
               type="number"
               placeholder="Bowler's Spell (over)"
               value={spell}
               onChange={(e) => setSpell(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
             />
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition"> : </label> */}
             <input
               type="number"
               placeholder="Wickets in Last Match"
               value={wickets}
               onChange={(e) => setWickets(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
             />
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition"> : </label> */}
             <select
               name="batsmanPosition"
               id=""
               placeholder="Player's Form"
               value={lastmatchform}
               onChange={(e) => setLastmatchform(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
             >
-              <option value="">Select Player's Form</option>
+              <option value="None">Select Player's Form</option>
               <option value="He is in Good Form">He is in Good Form</option>
               <option value="He is in Good Form">He is in Out of form</option>
             </select>
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition"> : </label> */}
             <select
               name="batsmanPosition"
               id=""
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
             >
-              <option value="">Select Role in Fantasy Team</option>
+              <option value="None">Select Role in Fantasy Team</option>
               <option value="Best choice for captain & vice captain">
                 Best choice for captain & vice captain
               </option>
@@ -188,42 +187,35 @@ function App() {
             </select>
           </div>
           <div>
-            {/* <label htmlFor="batsmanPosition"> : </label> */}
             <select
               name="batsmanPosition"
               id=""
               value={selectionpercentage}
               onChange={(e) => setSelectionpercentage(e.target.value)}
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
+              className="w-40 mx-6 sm:w-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 text-slate-400"
             >
-              <option value="">Selection Percentage</option>
+              <option value="None">Selection Percentage</option>
               <option value="Less selection percentage good pick for mega contest">
                 Less selection percentage good pick for mega contest
               </option>
             </select>
           </div>
         </div>
-        <div className="flex items-center space-x-8">
-          <div>
-            <button
-              type="submit"
-              onClick={handleSubmit}
-              className="w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Get Data
-            </button>
-          </div>
-          <div>
-            <button
-              onClick={handleAddAnother}
-              className="self-auto w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Add another
-            </button>
-          </div>
-        </div>
+        <button
+          type="submit"
+          onClick={handleSubmit}
+          className="w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Get Data
+        </button>
       </form>
-      <div className="flex justify-center items-center my-6">
+      <div className="flex justify-center items-center my-6 space-x-6">
+        <button
+          onClick={handleAddAnother}
+          className="self-auto w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Add another
+        </button>
         <button
           onClick={handleNewForm}
           className="w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -231,12 +223,20 @@ function App() {
           New Form
         </button>
       </div>
-      <div>
-        <ul>
-          {result.map((result, index) => (
-            <li key={index}>{result}</li>
-          ))}
-        </ul>
+      <div className="flex items-center justify-center">
+        <div className="w-3/4 bg-slate-500 px-6 py-6 mb-10">
+          {isData ? (
+            <ul>
+              {result.map((result, index) => (
+                <li key={index} className="mb-2">
+                  {result}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-center">No Data</p>
+          )}
+        </div>
       </div>
     </div>
   );
