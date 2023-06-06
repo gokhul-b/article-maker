@@ -99,6 +99,7 @@ function App() {
               <option value="4th down batsman">4th down batsman</option>
               <option value="5th down batsman">5th down batsman</option>
               <option value="Lower order batsman">Lower order batsman</option>
+              <option value="None">None</option>
             </select>
           </div>
           <div>
@@ -114,6 +115,7 @@ function App() {
               <option value="Attacking Batsman">Attacking Batsman</option>
               <option value="Average Batsman">Average Batsman</option>
               <option value="Slow run scorer">Slow run scorer</option>
+              <option value="None">None</option>
             </select>
           </div>
           <div>
@@ -131,6 +133,7 @@ function App() {
               <option value="Left Arm Fast Bowler">Left Arm Fast Bowler</option>
               <option value="Leg Spinner">Leg Spinner</option>
               <option value="Spinner">Spinner</option>
+              <option value="None">None</option>
             </select>
           </div>
           <div>
@@ -163,6 +166,7 @@ function App() {
               <option value="None">Select Player's Form</option>
               <option value="He is in Good Form">He is in Good Form</option>
               <option value="He is in Good Form">He is in Out of form</option>
+              <option value="None">None</option>
             </select>
           </div>
           <div>
@@ -180,6 +184,7 @@ function App() {
               <option value="Keep in only Grand league team">
                 Keep in only Grand league team
               </option>
+              <option value="None">None</option>
             </select>
           </div>
           <div>
@@ -194,6 +199,7 @@ function App() {
               <option value="Less selection percentage good pick for mega contest">
                 Less selection percentage good pick for mega contest
               </option>
+              <option value="None">None</option>
             </select>
           </div>
         </div>
