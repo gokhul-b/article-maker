@@ -60,11 +60,7 @@ function App() {
     setSelectionpercentage("");
     setResult([...result]);
   };
-  const isData = false;
-  if (result.length !== 0) {
-    return true;
-  }
-  console.log(isData);
+
   return (
     <div>
       <form className="flex flex-col items-center mt-12">
@@ -225,17 +221,13 @@ function App() {
       </div>
       <div className="flex items-center justify-center">
         <div className="w-3/4 bg-slate-500 px-6 py-6 mb-10">
-          {isData ? (
-            <ul>
-              {result.map((result, index) => (
-                <li key={index} className="mb-2">
-                  {result}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-center">No Data</p>
-          )}
+          <ul>
+            {result.map((result, index) => (
+              <li key={index} className="mb-2">
+                {result}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
